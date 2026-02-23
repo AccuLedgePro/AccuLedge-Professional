@@ -248,4 +248,12 @@
         
         function copyAddress() {
             const address = 'TBHq91kt8vLjvx3hoBayiXVHbdeBSypSGn';
-            navigator.clipboard.writeTex
+            navigator.clipboard.writeText(address).then(() => {
+                alert('✅ Wallet address copied to clipboard!');
+            }).catch(() => {
+                alert('Please copy the address manually');
+            });
+        }
+    </script>
+</body>
+</html>
